@@ -2168,6 +2168,50 @@
       <a name="label" val="S_BR_CMP"/>
       <a name="width" val="1"/>
     </comp>
+    <comp lib="7" loc="(1670,710)" name="Text">
+      <a name="text" val="REGISTRO DE ESTADO (one-hot)"/>
+    </comp>
+    <comp lib="7" loc="(1670,730)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="FETCH -&gt; DECODE -&gt; {EXEC-&gt;ALU_WB | MEM_ADDR-&gt;LOAD/STORE | BR_TGT-&gt;BR_CMP | JUMP | JR | SYSCALL-&gt;PRINT/HALT} -&gt; FETCH ; ILLEGAL -&gt; HALT"/>
+    </comp>
+    <comp lib="7" loc="(1675,56)" name="Text">
+      <a name="text" val="GRUPOS DE CLASES"/>
+    </comp>
+    <comp lib="7" loc="(2128,1528)" name="Text">
+      <a name="text" val="SALIDAS DE CONTROL"/>
+    </comp>
+    <comp lib="7" loc="(256,431)" name="Text">
+      <a name="text" val="INVERSORES"/>
+    </comp>
+    <comp lib="7" loc="(272,973)" name="Text">
+      <a name="text" val="DECODIFICACION DE CLASS (5 bits) -&gt; una linea por clase"/>
+    </comp>
+    <comp lib="7" loc="(2726,738)" name="Text">
+      <a name="text" val="LOGICA DE PROXIMO ESTADO"/>
+    </comp>
+    <comp lib="7" loc="(360,110)" name="Text">
+      <a name="text" val="ENTRADAS"/>
+    </comp>
+    <comp lib="7" loc="(3743,768)" name="Text">
+      <a name="text" val="PINES DE SALIDA"/>
+    </comp>
+    <comp lib="7" loc="(402,141)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="CLASS/ALU_OP vienen del Instruction_Decoder; SYS_EXIT=($v0==10) y SYS_PRINT=($v0==11) los calcula el Datapath a partir del registro A."/>
+    </comp>
+    <comp lib="7" loc="(595,1007)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="CLASS = 00000 R | 00001 addi/addiu | 00010 slti | 00011 andi | 00100 ori | 00101 lui | 00110 lw | 00111 sw | 01000 lb | 01001 lbu | 01010 sb | 01011 beq | 01100 bne | 01101 j | 01110 jal | 01111 jr | 10000 syscall"/>
+    </comp>
+    <comp lib="7" loc="(685,40)" name="Text">
+      <a name="font" val="SansSerif bold 20"/>
+      <a name="text" val="Control_Unit: maquina de estados one-hot (Moore/Mealy), 14 estados"/>
+    </comp>
+    <comp lib="7" loc="(695,65)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="Reset asincrono: todos los biestables a 0 =&gt; estado FETCH (se guarda nS_FETCH = NOT S_FETCH). Logica solo con puertas de 2 entradas y tuneles."/>
+    </comp>
     <wire from="(1020,350)" to="(1050,350)"/>
     <wire from="(1020,390)" to="(1050,390)"/>
     <wire from="(1020,430)" to="(1050,430)"/>
